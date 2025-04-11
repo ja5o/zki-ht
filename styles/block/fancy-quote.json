@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "fancy-quote",
+	"title": "Fancy Quote",
+	"blockTypes": [ "core/quote" ],
+	"styles": {
+		"color": {
+					"background": "#FFEBEE",
+					"text": "#D32F2F"
+		},
+		"border": {
+			"left": {
+				"width": "5px",
+				"color": "#F44336",
+				"style": "solid"
+			}
+		},
+		"spacing": {
+			"padding": {
+				"top": "1rem",
+				"right": "24px",
+				"bottom": "1rem",
+				"left": "24px"
+			}
+		}
+	}
+}

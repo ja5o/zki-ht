@@ -1,0 +1,331 @@
+# Copyright (C) 2025 ja5o
+# This file is distributed under the GNU General Public License v3 or Later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ZKI HT 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/hanyo-theme\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-11T18:41:13+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: zki-ht\n"
+
+#. Theme Name of the theme
+msgid "ZKI HT"
+msgstr ""
+
+#. Description of the theme
+msgid "Boilerplate for creating Hybrid WordPress® themes."
+msgstr ""
+
+#. Author of the theme
+msgid "ja5o"
+msgstr ""
+
+#: 404.php:14
+msgid "Not Found"
+msgstr ""
+
+#: 404.php:19
+msgid "Nothing found for the requested page. Try a search instead?"
+msgstr ""
+
+#: comments.php:41
+msgctxt "comments count"
+msgid "Trackback or Pingback"
+msgid_plural "Trackbacks and Pingbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: header.php:36
+msgid "Main Navigation"
+msgstr ""
+
+#: header.php:38
+msgid "Open menu"
+msgstr ""
+
+#: header.php:43
+msgid "Close menu"
+msgstr ""
+
+#: includes/block-areas.php:25
+#: includes/block-areas.php:36
+msgid "Block Areas"
+msgstr ""
+
+#: includes/block-areas.php:26
+msgid "Block Area"
+msgstr ""
+
+#: includes/block-areas.php:27
+msgid "Add New"
+msgstr ""
+
+#: includes/block-areas.php:28
+msgid "Add New Block Area"
+msgstr ""
+
+#: includes/block-areas.php:29
+msgid "Edit Block Area"
+msgstr ""
+
+#: includes/block-areas.php:30
+msgid "New Block Area"
+msgstr ""
+
+#: includes/block-areas.php:31
+msgid "View Block Area"
+msgstr ""
+
+#: includes/block-areas.php:32
+msgid "Search Block Areas"
+msgstr ""
+
+#: includes/block-areas.php:33
+msgid "No Block Areas found"
+msgstr ""
+
+#: includes/block-areas.php:34
+msgid "No Block Areas found in trash"
+msgstr ""
+
+#: includes/block-areas.php:35
+msgid "Parent Block Area:"
+msgstr ""
+
+#: includes/hooks/archive.php:106
+msgid "Go to page"
+msgstr ""
+
+#: includes/hooks/archive.php:108
+msgid "Pagination"
+msgstr ""
+
+#: includes/hooks/archive.php:112
+msgid "Go to Previous Page"
+msgstr ""
+
+#: includes/hooks/archive.php:127
+#: includes/hooks/archive.php:158
+msgid "Interim pages omitted"
+msgstr ""
+
+#: includes/hooks/archive.php:140
+msgid "Current page"
+msgstr ""
+
+#: includes/hooks/archive.php:150
+msgid "Page"
+msgstr ""
+
+#: includes/hooks/archive.php:171
+msgid "Go to Next Page"
+msgstr ""
+
+#: includes/login-logo.php:35
+msgctxt "Accessible text for login header text"
+msgid "Go back to %s"
+msgstr ""
+
+#: includes/setup.php:62
+msgid "Main Menu"
+msgstr ""
+
+#: includes/widgets.php:20
+msgid "Right Sidebar"
+msgstr ""
+
+#. translators: Search results title.
+#: partials/archive/archive-header.php:19
+msgid "Search results for: %s"
+msgstr ""
+
+#: partials/content/no-content.php:16
+msgid "Nothing Found"
+msgstr ""
+
+#: partials/content/no-content.php:18
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: partials/single/single-footer.php:16
+msgid "Categories: "
+msgstr ""
+
+#: partials/single/single-meta.php:15
+msgid "Written by"
+msgstr ""
+
+#. translators: post navigation prev.
+#: partials/single/single-navigation.php:14
+msgid "Previous"
+msgstr ""
+
+#. translators: post navigation next.
+#: partials/single/single-navigation.php:16
+msgid "Next"
+msgstr ""
+
+#: src/scripts/block-editor/block-areas.js:32
+msgid "Select a Hook"
+msgstr ""
+
+#: src/scripts/block-editor/block-areas.js:49
+msgid "Block Area Location"
+msgstr ""
+
+#: src/scripts/block-editor/block-areas.js:54
+msgid "Hook Name"
+msgstr ""
+
+#: src/scripts/block-editor/block-areas.js:64
+msgid "Priority"
+msgstr ""
+
+#: src/scripts/global/site-navigation.js:140
+msgid "Main menu"
+msgstr ""
+
+#: build/blocks/acf-example/block.json
+#: src/blocks/acf-example/block.json
+msgctxt "block title"
+msgid "ACF Example"
+msgstr ""
+
+#: build/blocks/acf-example/block.json
+#: src/blocks/acf-example/block.json
+msgctxt "block description"
+msgid "A custom testimonial block that uses ACF fields."
+msgstr ""
+
+#: build/blocks/acf-example/block.json
+#: src/blocks/acf-example/block.json
+msgctxt "block keyword"
+msgid "testimonial"
+msgstr ""
+
+#: build/blocks/acf-example/block.json
+#: src/blocks/acf-example/block.json
+msgctxt "block keyword"
+msgid "quote"
+msgstr ""
+
+#: styles/block/fancy-quote.json
+msgctxt "Style variation name"
+msgid "Fancy Quote"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Figtree"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Sans Serif"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Serif"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Monospace"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "X Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "XX Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "7"
+msgstr ""

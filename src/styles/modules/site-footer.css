@@ -1,0 +1,5 @@
+.site-footer {
+	position: relative;
+	padding: var(--wp--custom--stack--xlarge) var(--wp--custom--gutter--xlarge);
+	border-top: 1px solid var(--wp--preset--color--background);
+}

@@ -1,0 +1,40 @@
+.post-summary {
+	position: relative;
+
+	&-image {
+		@mixin a11y-margin 0, 0, 16;
+
+		img {
+			display: block;
+			aspect-ratio: 16/9;
+			border-radius: 5px;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&-title {
+		font-size: var(--wp--custom--heading-6);
+		margin: 0;
+	}
+
+	&-link {
+		color: inherit;
+		font-weight: 700;
+		text-decoration: none;
+
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			inset: 0;
+		}
+	}
+
+	&-content {
+		overflow: hidden;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 5;
+		display: -webkit-box;
+	}
+}

@@ -1,0 +1,7 @@
+.archive-header {
+	@mixin a11y-margin 30, 0, 60;
+
+	.archive-title {
+		margin: 0;
+	}
+}

@@ -1,0 +1,93 @@
+.comments {
+
+	ul {
+		padding: 0;
+		list-style: none;
+	}
+}
+
+.comment {
+
+	&-body {
+		padding: .5rem 0;
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 2.5rem;
+			bottom: -.5rem;
+			left: 16px;
+			width: 1px;
+			background-color: rgba(0,0,0,0.075);
+		}
+	}
+
+	&-meta {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-author {
+		display: flex;
+		font-weight: 700;
+
+		.avatar {
+			width: 32px;
+			height: 32px;
+			margin-right: var(--wp--preset--spacing--10);
+			border-radius: 3px;
+		}
+
+		.says {
+			margin-left: 4px;
+		}
+	}
+
+	&-metadata,
+	&-content,
+	.reply {
+		margin-left: 42px;
+	}
+
+	&-metadata {
+		font-size: var(--wp--preset--font-size--small);
+		margin-top: -.5rem;
+
+		a {
+			text-decoration: none;
+			color: var(--wp--preset--color--foreground);
+		}
+	}
+
+	&-content {
+		margin-top: 0.25rem;
+
+		@mixin content-paragraph;
+	}
+
+	.children {
+		position: relative;
+		margin-left: 2rem;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: .5rem;
+			left: -1rem;
+			width: 1rem;
+			height: 1.5rem;
+			border-style: solid;
+			border-color: rgba(0,0,0,0.075);
+			border-width: 0 0 1px 1px;
+			border-bottom-left-radius: 4px;
+		}
+	}
+
+	/* Remove line from last comment item */
+	&:last-child:not(:has(.children)) > .comment-body::after {
+		display: none;
+	}
+}

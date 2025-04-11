@@ -1,0 +1,17 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-zki-ht-example-dynamic {
+	border: 1px dotted #f00;
+
+	&-label {
+		display: block;
+	}
+
+	::placeholder {
+		position: relative;
+	}
+}

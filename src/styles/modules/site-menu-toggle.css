@@ -1,0 +1,16 @@
+.site-menu-toggle {
+
+	@media (--medium) {
+		display:none;
+		visibility:hidden
+	}
+
+	&[aria-hidden=true]{
+		display:none;
+		visibility:hidden;
+	}
+	&[aria-hidden=false]{
+		display:block;
+		visibility:visible;
+	}
+}

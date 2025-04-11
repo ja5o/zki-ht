@@ -1,0 +1,45 @@
+.site-header {
+	position: relative;
+	@mixin a11y-padding 10, 0;
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&-start,
+	&-center {
+
+		&:has(*) {
+			margin-right: var(--wp--preset--spacing--20);
+		}
+
+		@media (--large) {
+			max-width: 33.3333%;
+		}
+	}
+
+	&-center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&-end {
+
+		@media (--large) {
+			margin-left: auto;
+		}
+	}
+}
+
+.site-header--left-align {
+
+	.site-header-end {
+
+		@media (--large) {
+			margin-left: 0;
+			margin-right: auto;
+		}
+	}
+}

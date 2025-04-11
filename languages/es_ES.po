@@ -1,0 +1,312 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ZKI HT 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/hanyo-theme\n"
+"Last-Translator: \n"
+"Language-Team: Spanish (Spain)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-11T18:41:13+00:00\n"
+"PO-Revision-Date: 2025-04-11 19:01+0000\n"
+"Language: es_ES\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: zki-ht\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.7.2; wp-6.7.2\n"
+
+#. Theme Name of the theme
+msgid "ZKI HT"
+msgstr "ZKI HT"
+
+#. Description of the theme
+msgid "Boilerplate for creating Hybrid WordPress® themes."
+msgstr "Plantilla para crear temas híbridos para WordPress®."
+
+#. Author of the theme
+msgid "ja5o"
+msgstr "ja5o"
+
+#: 404.php:14
+msgid "Not Found"
+msgstr "No encontrado"
+
+#: 404.php:19
+msgid "Nothing found for the requested page. Try a search instead?"
+msgstr "No se encontró la página solicitada. ¿Deseas intentar otra búsqueda?"
+
+#: comments.php:41
+msgctxt "comments count"
+msgid "Trackback or Pingback"
+msgid_plural "Trackbacks and Pingbacks"
+msgstr[0] "Trackback o Pingback"
+msgstr[1] "Trackbacks y Pingbacks"
+
+#: header.php:36
+msgid "Main Navigation"
+msgstr "Navegación Principal"
+
+#: header.php:38
+msgid "Open menu"
+msgstr "Abrir menú"
+
+#: header.php:43
+msgid "Close menu"
+msgstr "Cerrar menú"
+
+#: includes/block-areas.php:25
+#: includes/block-areas.php:36
+msgid "Block Areas"
+msgstr "Áreas de Bloque"
+
+#: includes/block-areas.php:26
+msgid "Block Area"
+msgstr "Área de Bloque"
+
+#: includes/block-areas.php:27
+msgid "Add New"
+msgstr "Añadir Nuevo"
+
+#: includes/block-areas.php:28
+msgid "Add New Block Area"
+msgstr "Añadir Nueva Área de Bloque"
+
+#: includes/block-areas.php:29
+msgid "Edit Block Area"
+msgstr "Editar Área de Bloque"
+
+#: includes/block-areas.php:30
+msgid "New Block Area"
+msgstr "Nueva Área de Bloque"
+
+#: includes/block-areas.php:31
+msgid "View Block Area"
+msgstr "Ver Área de bloque"
+
+#: includes/block-areas.php:32
+msgid "Search Block Areas"
+msgstr "Buscar Áreas de Bloque"
+
+#: includes/block-areas.php:33
+msgid "No Block Areas found"
+msgstr "No se encontraron Áreas de bloque"
+
+#: includes/block-areas.php:34
+msgid "No Block Areas found in trash"
+msgstr "No se encontraron Áreas de bloque en papelera"
+
+#: includes/block-areas.php:35
+msgid "Parent Block Area:"
+msgstr "Área de Bloque padre:"
+
+#: includes/hooks/archive.php:106
+msgid "Go to page"
+msgstr "Ir a página"
+
+#: includes/hooks/archive.php:108
+msgid "Pagination"
+msgstr "Paginación"
+
+#: includes/hooks/archive.php:112
+msgid "Go to Previous Page"
+msgstr "Regresar a la página anterior"
+
+#: includes/hooks/archive.php:127
+#: includes/hooks/archive.php:158
+msgid "Interim pages omitted"
+msgstr "Se omiten las páginas intermedias."
+
+#: includes/hooks/archive.php:140
+msgid "Current page"
+msgstr "Página actual"
+
+#: includes/hooks/archive.php:150
+msgid "Page"
+msgstr "Página"
+
+#: includes/hooks/archive.php:171
+msgid "Go to Next Page"
+msgstr "Ir a la página siguiente"
+
+#: includes/login-logo.php:35
+msgctxt "Accessible text for login header text"
+msgid "Go back to %s"
+msgstr "Regresar a %s"
+
+#: includes/setup.php:62
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+#: includes/widgets.php:20
+msgid "Right Sidebar"
+msgstr "Barra lateral derecha"
+
+#. translators: Search results title.
+#: partials/archive/archive-header.php:19
+msgid "Search results for: %s"
+msgstr "Resultados de la búsqueda para: %s"
+
+#: partials/content/no-content.php:16
+msgid "Nothing Found"
+msgstr "No se encontró nada"
+
+#: partials/content/no-content.php:18
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Lo sentimos, pero no encontramos nada que coincida con tus términos de búsqueda. Inténtalo de nuevo con otras palabras."
+
+#: partials/single/single-footer.php:16
+msgid "Categories: "
+msgstr "Categorías: "
+
+#: partials/single/single-meta.php:15
+msgid "Written by"
+msgstr "Escrito por"
+
+#. translators: post navigation prev.
+#: partials/single/single-navigation.php:14
+msgid "Previous"
+msgstr "Anterior"
+
+#. translators: post navigation next.
+#: partials/single/single-navigation.php:16
+msgid "Next"
+msgstr "Siguiente"
+
+#: build/blocks/acf-example/block.json
+#: src/blocks/acf-example/block.json
+msgctxt "block title"
+msgid "ACF Example"
+msgstr "Ejemplo ACF"
+
+#: build/blocks/acf-example/block.json
+#: src/blocks/acf-example/block.json
+msgctxt "block description"
+msgid "A custom testimonial block that uses ACF fields."
+msgstr "Un bloque de testimonio personalizado que utiliza campos ACF."
+
+#: build/blocks/acf-example/block.json
+#: src/blocks/acf-example/block.json
+msgctxt "block keyword"
+msgid "testimonial"
+msgstr "testimonial"
+
+#: build/blocks/acf-example/block.json
+#: src/blocks/acf-example/block.json
+msgctxt "block keyword"
+msgid "quote"
+msgstr "cita"
+
+#: styles/block/fancy-quote.json
+msgctxt "Style variation name"
+msgid "Fancy Quote"
+msgstr "Cita Elegante"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr "Fondo"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr "Primer plano"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr "Acento"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr "Secundario"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr "Negro"
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr "Blanco"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Figtree"
+msgstr "Figtree"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Sans Serif"
+msgstr "Sans Serif del sistema"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Serif"
+msgstr "Serif del sistema"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Monospace"
+msgstr "Monospace del sistema"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Pequeño"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Mediano"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Grande"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "X Large"
+msgstr "XL"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "XX Large"
+msgstr "XXL"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr "1"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr "2"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr "3"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr "4"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr "5"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr "6"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "7"
+msgstr "7"

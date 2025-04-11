@@ -1,0 +1,72 @@
+/*
+ You can also use the following mixins which
+ are declared on postcss.config.js
+
+ a11y-padding $top, $right, $bottom (optional) $left (optional)
+ a11y-margin $top, $right, $bottom (optional) $left (optional)
+ */
+
+@define-mixin a11y-font-size $size {
+	font-size: calc(($(size) / 16) * 1rem);
+}
+
+@define-mixin content-paragraph {
+	p:first-child {
+		margin-top: 0;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/*
+ If you need to pass a comma-separated value as an
+ argument, use the special `single-arg` keyword.
+
+ For example: single-arg(top, center)
+ */
+@define-mixin cover-background $position: 'center' {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: $(position);
+}
+
+@define-mixin overlay $position: 'absolute' {
+	position: $(position);
+	display: block;
+	inset: 0;
+}
+
+/*
+ Media queries mixins
+ based on https://github.com/WebDevStudios/wds-bt/blob/main/assets/scss/abstracts/responsive-mixins.scss
+*/
+@define-mixin responsive-min $min-width {
+
+	@media only screen and (min-width: $(min-width)) {
+		@mixin-content;
+	}
+}
+
+@define-mixin responsive-max $max-width {
+
+	@media only screen and (max-width: $(max-width)) {
+		@mixin-content;
+	}
+}
+
+@define-mixin responsive-range $min-width, $max-width {
+
+	@media only screen and (min-width: $(min-width)) and (max-width: $(max-width)) {
+		@mixin-content;
+	}
+}
+
+@define-mixin dashed-outline {
+
+	&:focus:not(.u-hidden-focus) {
+		outline-color: var(--wp--preset--color--foreground);
+		outline: 1px dashed currentColor;
+		outline-offset: -2px;
+	}
+}

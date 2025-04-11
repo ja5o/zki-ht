@@ -1,0 +1,13 @@
+.archive-grid {
+	display: grid;
+	gap: 1rem;
+	@mixin a11y-margin 60, 0;
+
+	@media (--small) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	@media (--medium) {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}

@@ -1,0 +1,11 @@
+.search {
+
+	.archive-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.post-summary-image {
+		float: left;
+		margin: 0 var(--wp--preset--spacing--30) 0 0;
+	}
+}

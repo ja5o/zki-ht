@@ -1,0 +1,79 @@
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.map
+
+# Env files #
+######################
+.env
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+**.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
+**/.sass-cache
+**/.sass-cache/*
+**/.map
+
+# Composer #
+##########
+vendor
+composer.lock
+
+# JSHint #
+##########
+/.jshintrc
+
+# Bower #
+##########
+assets/bower_components/*
+
+# Codekit #
+##########
+/codekit-config.json
+*.codekit
+**.codekit-cache/*
+
+# NPM #
+##########
+node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.json
+
+# VSCode Workspace Settings #
+##########
+.vscode
+
+# Compiled assets #
+##########
+build
+
+# Overrides #
+##########
+!src/icons
+!build/icons

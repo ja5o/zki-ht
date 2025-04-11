@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "zki/acf-example",
+	"title": "ACF Example",
+	"description": "A custom testimonial block that uses ACF fields.",
+	"category": "formatting",
+	"icon": "admin-comments",
+	"keywords": [
+		"testimonial",
+		"quote"
+	],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "render.php"
+	},
+	"supports": {
+		"anchor": true
+	},
+	"style": [
+		"file:./index.css"
+	],
+	"editorScript": "file:./index.js"
+}

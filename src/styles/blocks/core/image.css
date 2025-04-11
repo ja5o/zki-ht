@@ -1,0 +1,6 @@
+.wp-block-image {
+
+	.wp-element-caption {
+		font-size: var(--wp--preset--font-size--small);
+	}
+}

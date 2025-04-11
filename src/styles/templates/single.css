@@ -1,0 +1,24 @@
+.entry {
+
+	&-header {
+		@mixin a11y-margin 30, 0, 60;
+	}
+
+	&-featured-image {
+		@mixin a11y-margin 0, 0, 30;
+
+		img {
+			display: block;
+			border-radius: 5px;
+		}
+	}
+
+	&-title {
+		margin-block-start: 0;
+		margin-block-end: 0;
+	}
+
+	&-navigation {
+		@mixin a11y-margin 20, 0;
+	}
+}

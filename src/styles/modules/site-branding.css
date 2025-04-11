@@ -1,0 +1,15 @@
+.site-branding {
+
+	a {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: var(--wp--preset--font-size--large);
+	}
+
+	.custom-logo {
+		display: block;
+		height: 50px;
+	}
+}

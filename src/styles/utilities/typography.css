@@ -1,0 +1,15 @@
+.text-bold {
+	font-weight: 700;
+}
+
+.text-semibold {
+	font-weight: 600;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.no-line-height {
+	line-height: 1em !important;
+}

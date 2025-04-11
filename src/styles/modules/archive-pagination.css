@@ -1,0 +1,46 @@
+.archive-pagination {
+	@mixin a11y-margin 30, auto;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		justify-content: center;
+
+		li {
+			list-style-type: none;
+			display: inline-block;
+
+			a,
+			span {
+				background: var(--wp--preset--color--background);
+				border: 1px solid var(--wp--preset--color--accent);
+				border-radius: 5px;
+				color: var(--wp--preset--color--accent);
+				fill: var(--wp--preset--color--accent);
+				width: 44px;
+				height: 44px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: var(--wp--preset--font-size--small);
+				font-weight: 700;
+				text-align: center;
+				text-decoration: none;
+			}
+
+			svg {
+				fill: inherit;
+			}
+
+			&:hover > a,
+			&.active > span {
+				background: var(--wp--preset--color--accent);
+				color: var(--wp--preset--color--background);
+				fill: var(--wp--preset--color--background);
+			}
+		}
+	}
+}
