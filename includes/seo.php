@@ -74,7 +74,7 @@ function zki_ht_preload_fonts() {
 		);
 	}
 }
-add_action( 'wp_head', 'zki_ht_preload_icon_fonts' );
+add_action( 'wp_head', 'zki_ht_preload_fonts' );
 
 /**
  * Preload Hero Image
