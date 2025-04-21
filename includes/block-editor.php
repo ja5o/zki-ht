@@ -193,6 +193,10 @@ add_action( 'init', 'zki_ht_register_blocks' );
  * @return boolean|array
  */
 function zki_ht_disable_core_blocks( bool|array $allowed_block_types, WP_Block_Editor_Context $block_editor_context ): bool|array {
+	// Return early if we are not in a post type context
+	if ( null === $block_editor_context->post ) {
+		return $allowed_block_types;
+	}
 	// Disable for all.
 	$disable_for_all = apply_filters( 'zki_disable_blocks_for_all', false );
 
