@@ -105,7 +105,10 @@ function zki_ht_editor_styles() : void {
 add_action( 'enqueue_block_assets', 'zki_ht_editor_styles' );
 
 /**
- * Forces separate loading of all block stylesheets.
+ * Filters whether block styles should be loaded separately
+ *
+ * Returning false loads all core block assets, regardless of whether they are rendered in a page or not
+ * Returning true loads core block assets only when they are rendered.
  *
  * @link https://developer.wordpress.org/reference/hooks/should_load_separate_core_block_assets/
  *
@@ -113,6 +116,22 @@ add_action( 'enqueue_block_assets', 'zki_ht_editor_styles' );
  * @return bool Always returns true.
  */
 add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
+/**
+ * Filters whether block styles should be loaded on demand.
+ *
+ * Returning false loads all block assets, regardless of whether they are rendered in a page or not.
+ * Returning true loads block assets only when they are rendered.
+ *
+ * This filter differs from should_load_separate_core_block_assets in that it does not take into account
+ * the enqueueing of the wp-block-library stylesheet.
+ *
+ * @link https://developer.wordpress.org/reference/hooks/should_load_block_assets_on_demand/
+ *
+ * @since 0.1.1
+ * @return bool Always returns true.
+ */
+add_filter( 'should_load_block_assets_on_demand', '__return_true' );
 
 /**
  * Disable the remote patterns coming from the Dotorg pattern directory.
