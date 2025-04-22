@@ -77,15 +77,14 @@ function zki_ht_preload_fonts() {
 add_action( 'wp_head', 'zki_ht_preload_fonts' );
 
 /**
- * Preload Hero Image
+ * Preload First Images
  *
- * Preloads the background image of the first block if it
- * is a 'core/cover' block.
+ * Preloads up to two images from top-level blocks and their inner blocks.
  *
- * @since 0.1.0
+ * @since 0.1.1
  * @return void
  */
-function zki_ht_preload_hero_image() : void {
+function zki_ht_preload_images() : void {
 	global $post;
 
 	// Return early if we don't have post data.
@@ -94,26 +93,21 @@ function zki_ht_preload_hero_image() : void {
 	}
 
 	// Allow for plugin or child themes to remove this feature.
-	$maybe_preload_hero_image = apply_filters( 'zki_ht_preload_hero_image', true );
+	$maybe_preload_hero_image = apply_filters( 'zki_ht_preload_images', true );
 
 	if ( $maybe_preload_hero_image && has_blocks( $post->post_content ) ) {
 		$blocks = parse_blocks( $post->post_content );
+		$preload_count = 0;
+		foreach ( $blocks as $block ) {
+			$preload_count = zki_ht_preload_image_inside_block( $block, $preload_count );
 
-		// Preload only if cover media is set and is an image.
-		if ( $blocks[0]['blockName'] === 'core/cover' && isset( $blocks[0]['attrs']['id'] ) && wp_attachment_is( 'image', $blocks[0]['attrs']['id'] ) ) {
-			$image_src = wp_get_attachment_image_url( $blocks[0]['attrs']['id'], 'fullhd' );
-			$image_srcset = wp_get_attachment_image_srcset( $blocks[0]['attrs']['id'] );
-			$image_sizes = wp_get_attachment_image_sizes( $blocks[0]['attrs']['id'], 'fullhd' );
-			echo sprintf(
-				'<link rel="preload" as="image" href="%s" imagesrcset="%s" imagesizes="%s">',
-				$image_src,
-				$image_srcset,
-				$image_sizes
-			);
+			if ( $preload_count >= 2 ) {
+				break;
+			}
 		}
 	}
 }
-add_action( 'wp_head', 'zki_ht_preload_hero_image' );
+add_action( 'wp_head', 'zki_ht_preload_images' );
 
 /**
  * Custom Fetch Priority
@@ -152,3 +146,44 @@ function zki_ht_set_fetchpriority_on_elements( $block_content, $block ) {
 	return $block_content;
 }
 add_filter( 'render_block', 'zki_ht_set_fetchpriority_on_elements', 10, 2 );
+
+/**
+ * Preload Image in Head
+ *
+ * Recursively preload images found in a block and its inner blocks.
+ *
+ * @since 0.1.1
+ *
+ * @param array $block           A single parsed block.
+ * @param int   $preload_count   Current number of images preloaded.
+ * @return int                   Updated preload count.
+ */
+function zki_ht_preload_image_inside_block( $block, $preload_count = 0 ) {
+	if ( $preload_count >= 2 ) {
+		return $preload_count;
+	}
+
+	if ( isset( $block['attrs']['id'] ) && wp_attachment_is( 'image', $block['attrs']['id'] ) ) {
+		$image_src = wp_get_attachment_image_url( $block['attrs']['id'], 'fullhd' );
+		$image_srcset = wp_get_attachment_image_srcset( $block['attrs']['id'] );
+		$image_sizes = wp_get_attachment_image_sizes( $block['attrs']['id'], 'fullhd' );
+		echo sprintf(
+			'<link rel="preload" as="image" href="%s" imagesrcset="%s" imagesizes="%s">',
+			$image_src,
+			$image_srcset,
+			$image_sizes
+		);
+		$preload_count++;
+	}
+
+	if ( ! empty( $block['innerBlocks'] ) ) {
+		foreach ( $block['innerBlocks'] as $inner_block ) {
+			$preload_count = zki_ht_preload_image_inside_block( $inner_block, $preload_count );
+			if ( $preload_count >= 3 ) {
+				break;
+			}
+		}
+	}
+
+	return $preload_count;
+}
