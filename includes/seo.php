@@ -120,7 +120,7 @@ add_action( 'wp_head', 'zki_ht_preload_images' );
  * @param array     $block         The full block, including name and attributes.
  * @return string The block content.
  */
-function zki_ht_set_fetchpriority_on_elements( $block_content, $block ) {
+function zki_ht_set_fetchpriority_on_elements( string $block_content, array $block ) {
 	$fetch_classes = [
 		'zki-fetch-high' => 'high',
 	];
@@ -158,7 +158,7 @@ add_filter( 'render_block', 'zki_ht_set_fetchpriority_on_elements', 10, 2 );
  * @param int   $preload_count   Current number of images preloaded.
  * @return int                   Updated preload count.
  */
-function zki_ht_preload_image_inside_block( $block, $preload_count = 0 ) {
+function zki_ht_preload_image_inside_block( array $block, int $preload_count = 0 ) {
 	if ( $preload_count >= 2 ) {
 		return $preload_count;
 	}
