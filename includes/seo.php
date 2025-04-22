@@ -114,3 +114,41 @@ function zki_ht_preload_hero_image() : void {
 	}
 }
 add_action( 'wp_head', 'zki_ht_preload_hero_image' );
+
+/**
+ * Custom Fetch Priority
+ *
+ * Adds `fetchpriority` to the images of the blocks that contains
+ * the class names specified on the `zki_fetchpriority_classes`.
+ *
+ * @since 0.1.1
+ * @param string    $block_content The block content.
+ * @param array     $block         The full block, including name and attributes.
+ * @return string The block content.
+ */
+function zki_ht_set_fetchpriority_on_elements( $block_content, $block ) {
+	$fetch_classes = [
+		'zki-fetch-high' => 'high',
+	];
+
+	$fetch_classes = apply_filters( 'zki_fetchpriority_classes', $fetch_classes );
+
+	if ( isset( $block['attrs']['className'] ) && ! empty( $block['attrs']['className'] ) ) {
+		$block_classes = explode( ' ', $block['attrs']['className'] );
+
+		foreach( $block_classes as $block_class ) {
+			if ( isset( $fetch_classes[ $block_class ] ) ) {
+				$processor = new WP_HTML_Tag_Processor( $block_content );
+
+				if ( $processor->next_tag( 'img' ) ) {
+					$processor->set_attribute( 'fetchpriority', $fetch_classes[ $block_class ] );
+				}
+
+				$block_content = $processor->get_updated_html();
+			}
+		}
+	}
+
+	return $block_content;
+}
+add_filter( 'render_block', 'zki_ht_set_fetchpriority_on_elements', 10, 2 );
